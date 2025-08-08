@@ -8,6 +8,8 @@ Using this plugin, you can:
 - Jump to a mark.
 - Delete a mark.
 
+<img src="images/sample.png" width="75%" />
+
 
 ## Installation
 
