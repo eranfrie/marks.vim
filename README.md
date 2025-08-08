@@ -36,7 +36,7 @@ Using this plugin, you can:
 The plugin exposes a single function:
 `MarksMenu(...)`.
 
-The function accepts an optional argument to filter the marks.
+The function accepts an optional argument, list of pairs, to filter the marks.
 E.g., to display only the user-defined imarks (local and global), call
 `MarksMenu([["a","z"], ["A", "Z"]])`.
 
