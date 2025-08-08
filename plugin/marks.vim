@@ -91,10 +91,6 @@ function s:InteractiveMenu(ranges) abort
     endif
   endfor
 
-  if empty(l:options)
-    return [0, v:null, v:null, v:null]
-  endif
-
   bo new +setlocal\ buftype=nofile\ bufhidden=wipe\ nofoldenable\
     \ colorcolumn=0\ nobuflisted\ number\ norelativenumber\ noswapfile\ wrap\ cursorline
 
