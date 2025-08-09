@@ -25,10 +25,10 @@ Using this plugin, you can:
 
 ## Selection Menu:
 
-- `Down` / `Up` / `PageDown` / `PageUp` to navigate the menu.
+- `j` / `k` / `Down` / `Up` / `PageDown` / `PageUp` to navigate the menu.
 - `Enter` to jump to a mark.
-- `Esc` / `Ctrl-C` to close the selection manu.
 - `Backspace` / `Delete` to delete a mark.
+- `Esc` / `Ctrl-C` to close the selection manu.
 
 
 ## Functions:

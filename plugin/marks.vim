@@ -125,9 +125,9 @@ function s:InteractiveMenu(ranges) abort
       let l:selected_line = getline('.')
       call s:CloseBuffer(l:cur_buf)
       return [1, l:selected_line]
-    elseif ch == "\<Up>"
+    elseif ch == "\<Up>" || ch ==# 0x6B " k
       norm k
-    elseif ch == "\<Down>"
+    elseif ch == "\<Down>" || ch ==# 0x6A " j
       norm j
     elseif ch == "\<PageUp>"
       for i in range(1, l:marks_menu_height)
