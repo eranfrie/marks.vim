@@ -1,0 +1,84 @@
+*marks-vim.txt*                Plugin for managing and interacting with marks.
+
+
+                                Marks.vim
+
+
+Author:            Eran Friedman
+Plugin Homepage:   <https://github.com/eranfrie/marks.vim>
+
+===============================================================================
+Contents                                                        *MarksContents*
+
+  1.  Introduction ................. |MarksIntroduction|
+  2.  Installation ................. |MarksInstallation|
+  3.  Selection Menu ............... |MarksSelectionMenu|
+  4.  Functions .................... |MarksFunctions|
+  5.  Customizations ............... |MarksCustomizations|
+  6.  Mappings ..................... |MarksMappings|
+
+===============================================================================
+1. Introduction                                             *MarksIntroduction*
+
+A handy Vim plugin to manage and interact with `marks`. It displays all the
+marks in a nice selection menu (including local, global and special marks).
+It allows to iterate the marks while showing a preview popup and to jump to
+a mark and also to delete a mark.
+
+===============================================================================
+2. Installation                                             *MarksInstallation*
+
+- Install using your favorite package manager, e.g., Vundle:
+  1. Add the following to your .vimrc: Plugin 'eranfrie/marks.vim'
+  2. Reload .vimrc
+  3. Run: :PluginInstall
+
+- Manual installation: copy gmarks.vim to your plugin directory
+  (e.g., ~/.vim/plugin/ in Unix / Mac OS X).
+
+===============================================================================
+3. Selection Menu                                          *MarksSelectionMenu*
+
+- |j| / |k| / |Down| / |Up| / |PageDown| / |PageUp| to navigate the menu.
+- |Enter| to jump to a mark.
+- |Backspace| / |Delete| to delete a mark.
+- |Esc| / |Ctrl-C| to cancel.
+
+===============================================================================
+4. Functions                                                   *MarksFunctions*
+
+The plugin exposes a single function: `MarksMenu(...)`.
+
+The function accepts an optional argument, list of pairs, to filter the marks.
+E.g., to display only the user-defined imarks (local and global), call
+`MarksMenu([["a","z"], ["A", "Z"]])`.
+
+===============================================================================
+5. Customizations                                         *MarksCustomizations*
+
+Set the height (number of lines) of the selection menu
+>
+  let g:marks_menu_height = 15
+<
+
+Set the color of the file path
+>
+  let g:marks_file_color = "blue"
+<
+
+Disable loading the plugin
+>
+  let g:loaded_marks = 1
+<
+
+===============================================================================
+6. Mappings                                                     *MarksMappings*
+
+Keys are not mapped automatically. You can choose your own mapping,
+For example:
+>
+  nnoremap <leader>m :call MarksMenu()
+<
+
+===============================================================================
+vim:ft=help:et:ts=2:sw=2:sts=2:norl
